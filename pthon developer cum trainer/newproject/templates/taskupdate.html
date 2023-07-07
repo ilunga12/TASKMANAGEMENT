@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "admin.html" %}
+{% block content %}
+
+{%load crispy_forms_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2><form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <input type="submit"/>
+
+                      </form></h2>
+
+</body>
+</html>
+{% endblock %}

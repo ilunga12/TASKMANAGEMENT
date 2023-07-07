@@ -1,0 +1,8 @@
+{% extends "admin.html" %}
+{% block content %}
+
+{%load crispy_forms_tags %}
+{% for i in data %}
+<td>{{i.details}}</td>
+ {% endfor %}
+{% endblock %}
